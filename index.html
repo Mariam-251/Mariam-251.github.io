@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mariam Hussain | Electrical & Electronics Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            background: rgba(11, 17, 32, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 30%, rgba(56,189,248,0.15), transparent 30%),
+                #0b1120;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero p:first-child {
+            color: #38bdf8;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(45px, 7vw, 80px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #38bdf8;
+        }
+
+        .hero-description {
+            color: #94a3b8;
+            font-size: 20px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 13px 25px;
+            margin-right: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #0b1120;
+            font-weight: bold;
+        }
+
+        .secondary {
+            border: 1px solid #334155;
+            color: #f8fafc;
+        }
+
+        .buttons a:hover {
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        .about-text {
+            max-width: 800px;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .project-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            padding: 35px;
+            max-width: 900px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #1e293b;
+            color: #7dd3fc;
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 15px 20px;
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            color: #cbd5e1;
+        }
+
+        .experience {
+            border-left: 2px solid #38bdf8;
+            padding-left: 25px;
+            max-width: 800px;
+        }
+
+        .experience h3 {
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        .experience p {
+            color: #94a3b8;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav div:last-child {
+                display: none;
+            }
+
+            section {
+                padding: 80px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">MH.</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p>Hello, I'm</p>
+
+            <h1>
+                Mariam <span class="highlight">Hussain</span>
+            </h1>
+
+            <h2>
+                Electrical & Electronics Engineering Graduate
+            </h2>
+
+            <p class="hero-description">
+                Interested in Embedded Systems, PCB Design, Circuit Analysis,
+                and innovative engineering solutions.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="secondary">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-subtitle">
+            Electrical & Electronics Engineering
+        </p>
+
+        <p class="about-text">
+            I am an Electrical & Electronics Engineering graduate from the
+            University of Sharjah with a strong interest in embedded systems,
+            PCB design, circuit analysis, sensors, and intelligent engineering
+            solutions. I enjoy transforming engineering concepts into practical
+            hardware and software systems.
+        </p>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2 class="section-title">Featured Project</h2>
+
+        <p class="section-subtitle">
+            Senior Design Project
+        </p>
+
+        <div class="project-card">
+
+            <h3>
+                Hybrid FES System for Mobility Rehabilitation
+            </h3>
+
+            <p>
+                A wearable rehabilitation system designed to assist mobility
+                for patients experiencing foot drop. The system combines
+                in-shoe gait detection with a below-knee Functional Electrical
+                Stimulation module.
+            </p>
+
+            <div class="tags">
+                <span class="tag">ESP32</span>
+                <span class="tag">Embedded Systems</span>
+                <span class="tag">PCB Design</span>
+                <span class="tag">BLE</span>
+                <span class="tag">Sensors</span>
+                <span class="tag">MATLAB</span>
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <p class="section-subtitle">
+            Tools and technologies
+        </p>
+
+        <div class="skills">
+
+            <div class="skill">PCB Design</div>
+            <div class="skill">Circuit Analysis</div>
+            <div class="skill">Embedded Systems</div>
+            <div class="skill">ESP32</div>
+            <div class="skill">MATLAB</div>
+            <div class="skill">Python</div>
+            <div class="skill">KiCad</div>
+            <div class="skill">BLE</div>
+            <div class="skill">Sensors</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Circuit Simulation</div>
+            <div class="skill">Programming</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+
+        <h2 class="section-title">Experience</h2>
+
+        <p class="section-subtitle">
+            Internship
+        </p>
+
+        <div class="experience">
+
+            <h3>
+                Sharjah Electricity, Water and Gas Authority (SEWA)
+            </h3>
+
+            <p>
+                Engineering Internship
+            </p>
+
+            <p>
+                Gained practical exposure to engineering operations,
+                electrical drawings, technical procedures, and professional
+                engineering environments.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+        <p class="section-subtitle">
+            I'm open to engineering opportunities and professional connections.
+        </p>
+
+        <p>
+            LinkedIn:
+            <a href="#" target="_blank">
+                Add your LinkedIn
+            </a>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:YOUR-EMAIL@example.com">
+                YOUR-EMAIL@example.com
+            </a>
+        </p>
+
+    </section>
+
+
+    <footer>
+        © 2026 Mariam Hussain. All rights reserved.
+    </footer>
+
+</body>
+</html>
