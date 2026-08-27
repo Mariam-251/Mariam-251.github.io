@@ -477,7 +477,62 @@
             }
         }
 
-        .antenna-images {
+/* Project Images */
+
+.project-images {
+    margin-bottom: 30px;
+}
+
+.project-main-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    margin-bottom: 15px;
+    background: #0b1120;
+}
+
+.project-result-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.project-result-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #0b1120;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    display: block;
+}
+
+.single-project-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    background: #0b1120;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    display: block;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 700px) {
+
+    .project-result-images {
+        grid-template-columns: 1fr;
+    }
+
+    .project-result-image {
+        height: auto;
+    }
+
+}   
+    .antenna-images {
     margin-bottom: 30px;
 }
 
@@ -644,12 +699,27 @@
 
     <div class="featured-card">
 
-        <p class="project-number">PROJECT 01</p>
+    <p class="project-number">PROJECT 01</p>
 
-        <!-- Add FES image here later -->
-        <!-- <img src="images/fes-project.jpg"
-             alt="Hybrid FES System"
-             class="project-image"> -->
+    <div class="project-images">
+
+    <img src="images/fes-project1.jpg"
+         alt="Hybrid FES System"
+         class="project-main-image">
+
+    <div class="project-result-images">
+
+    <img src="images/fes-insole.jpg"
+             alt="In-Shoe Gait Detection System"
+             class="project-result-image">
+
+    <img src="images/fes-stimulator.jpg"
+             alt="FES System"
+             class="project-result-image">
+
+    </div>
+
+</div>
 
         <h3>
             Hybrid FES System with In-Shoe Gait Detection
@@ -737,7 +807,11 @@
             <li>MATLAB-based work related to Massive MIMO.</li>
 
         </ul>
-
+        
+        <img src="images/mimo-matlab.jpg"
+             alt="Massive MIMO MATLAB Simulation"
+             class="single-project-image">
+        
         <br>
 
         <div class="interest-list">
@@ -829,10 +903,9 @@
 
             <div class="project-icon">⚡</div>
 
-            <!-- Add buck converter image later -->
-            <!-- <img src="images/buck-converter.jpg"
-                 alt="Buck Converter"
-                 class="project-image"> -->
+            <img src="images/buck-converter.jpg"
+            alt="Buck Converter Design"
+            class="single-project-image">
 
             <h3>
                 Buck Converter Design
@@ -862,11 +935,11 @@
 
             <div class="project-icon">📶</div>
 
-            <!-- Add MATLAB image later -->
-            <!-- <img src="images/wireless-matlab.jpg"
-                 alt="Wireless Communication MATLAB Project"
-                 class="project-image"> -->
-
+            <img src="images/wireless-matlab.jpg"
+            alt="Wireless Communication MATLAB Project"
+            class="single-project-image">
+            
+                           
             <h3>
                 Wireless Communication MATLAB Project
             </h3>
