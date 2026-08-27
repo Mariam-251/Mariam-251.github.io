@@ -476,6 +476,49 @@
                 padding: 25px;
             }
         }
+
+        .antenna-images {
+    margin-bottom: 30px;
+}
+
+.antenna-main-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    margin-bottom: 15px;
+}
+
+.antenna-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.antenna-result-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #0b1120;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    display: block;
+}
+
+@media (max-width: 700px) {
+
+    .antenna-results {
+        grid-template-columns: 1fr;
+    }
+
+    .antenna-result-image {
+        height: auto;
+    }
+
+}
+        
     </style>
 </head>
 
@@ -735,17 +778,25 @@
 
             <div class="project-icon">📡</div>
 
-            <img src="images/antenna-array.jpg"
-            alt="7-Element Dipole Antenna Array"
-            class="project-image">
+            <div class="antenna-images">
 
-            <img src="images/antenna-s11.jpg"
-            alt="Antenna S11 Performance"
-            class="project-image">
+    <img src="images/antenna-array.jpg"
+         alt="7-Element Dipole Antenna Array"
+         class="antenna-main-image">
 
-           <img src="images/antenna-radiation-pattern.jpg"
-           alt="Dipole Antenna Radiation Pattern"
-           class="project-image">
+    <div class="antenna-results">
+
+        <img src="images/antenna-s11.jpg"
+             alt="Antenna S11 Performance"
+             class="antenna-result-image">
+
+        <img src="images/antenna-radiation-pattern.jpg"
+             alt="Dipole Antenna Radiation Pattern"
+             class="antenna-result-image">
+
+    </div>
+
+</div>
                    
 
             <h3>
