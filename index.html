@@ -209,6 +209,7 @@
             background: #111827;
             border: 1px solid #1e293b;
             border-radius: 18px;
+            box-sizing: border-box;
         }
 
         .featured-card {
@@ -255,15 +256,6 @@
         .contribution-list {
             padding-left: 20px;
             color: #94a3b8;
-        }
-
-        .project-image {
-            width: 100%;
-            max-height: 450px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            border: 1px solid #1e293b;
         }
 
         .research-card {
@@ -319,6 +311,9 @@
         .project-card {
             padding: 30px;
             transition: 0.3s;
+            height: auto;
+            min-height: 0;
+            overflow: hidden;
         }
 
         .project-card:hover {
@@ -344,6 +339,100 @@
         .project-card p {
             color: #94a3b8;
             margin-bottom: 18px;
+            max-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        /* FES / Project Images */
+
+        .project-images {
+            width: 100%;
+            max-width: 100%;
+            margin: 25px 0 30px;
+            overflow: hidden;
+        }
+
+        .project-main-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: contain;
+            display: block;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            margin-bottom: 15px;
+            background: #0b1120;
+        }
+
+        .project-result-images {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .project-result-image {
+            width: 100%;
+            max-width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background: #0b1120;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            display: block;
+        }
+
+        .single-project-image {
+            width: 100%;
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            background: #0b1120;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            display: block;
+            margin: 25px 0;
+        }
+
+        /* Antenna Images */
+
+        .antenna-images {
+            width: 100%;
+            max-width: 100%;
+            margin: 25px 0 10px;
+            overflow: hidden;
+        }
+
+        .antenna-main-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            margin-bottom: 15px;
+            background: #0b1120;
+        }
+
+        .antenna-results {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .antenna-result-image {
+            width: 100%;
+            max-width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background: #0b1120;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            display: block;
         }
 
         .skills-section {
@@ -477,107 +566,22 @@
             }
         }
 
-/* Project Images */
+        @media (max-width: 700px) {
 
-.project-images {
-    margin-bottom: 30px;
-}
+            .project-result-images,
+            .antenna-results {
+                grid-template-columns: 1fr;
+            }
 
-.project-main-image {
-    width: 100%;
-    max-height: 420px;
-    object-fit: contain;
-    display: block;
-    border-radius: 12px;
-    border: 1px solid #1e293b;
-    margin-bottom: 15px;
-    background: #0b1120;
-}
+            .project-result-image,
+            .antenna-result-image {
+                height: auto;
+            }
 
-.project-result-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.project-result-image {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    background: #0b1120;
-    border-radius: 12px;
-    border: 1px solid #1e293b;
-    display: block;
-}
-
-.single-project-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-    background: #0b1120;
-    border-radius: 12px;
-    border: 1px solid #1e293b;
-    display: block;
-    margin-bottom: 25px;
-}
-
-@media (max-width: 700px) {
-
-    .project-result-images {
-        grid-template-columns: 1fr;
-    }
-
-    .project-result-image {
-        height: auto;
-    }
-
-}   
-    .antenna-images {
-    margin-bottom: 30px;
-}
-
-.antenna-main-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-    display: block;
-    border-radius: 12px;
-    border: 1px solid #1e293b;
-    margin-bottom: 15px;
-}
-
-.antenna-results {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.antenna-result-image {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    background: #0b1120;
-    border-radius: 12px;
-    border: 1px solid #1e293b;
-    display: block;
-}
-
-@media (max-width: 700px) {
-
-    .antenna-results {
-        grid-template-columns: 1fr;
-    }
-
-    .antenna-result-image {
-        height: auto;
-    }
-
-}
-        .project-card {
-    overflow: hidden;
-    box-sizing: border-box;
-}
-        
+            .featured-card {
+                padding: 25px;
+            }
+        }
     </style>
 </head>
 
@@ -703,27 +707,7 @@
 
     <div class="featured-card">
 
-    <p class="project-number">PROJECT 01</p>
-
-    <div class="project-images">
-
-    <img src="images/fes-project2.jpg"
-         alt="Hybrid FES System"
-         class="project-main-image">
-
-    <div class="project-result-images">
-
-    <img src="images/fes-insole.jpg"
-             alt="In-Shoe Gait Detection System"
-             class="project-result-image">
-
-    <img src="images/fes-stimulator.jpg"
-             alt="FES System"
-             class="project-result-image">
-
-    </div>
-
-</div>
+        <p class="project-number">PROJECT 01</p>
 
         <h3>
             Hybrid FES System with In-Shoe Gait Detection
@@ -736,6 +720,26 @@
             combines in-shoe gait detection with a below-knee
             Functional Electrical Stimulation (FES) module.
         </p>
+
+        <div class="project-images">
+
+            <img src="images/fes-project2.jpg"
+                 alt="Hybrid FES System"
+                 class="project-main-image">
+
+            <div class="project-result-images">
+
+                <img src="images/fes-insole.jpg"
+                     alt="In-Shoe Gait Detection System"
+                     class="project-result-image">
+
+                <img src="images/fes-stimulator.jpg"
+                     alt="FES System"
+                     class="project-result-image">
+
+            </div>
+
+        </div>
 
         <div class="project-columns">
 
@@ -811,12 +815,10 @@
             <li>MATLAB-based work related to Massive MIMO.</li>
 
         </ul>
-        
+
         <img src="images/mimo-matlab.jpg"
              alt="Massive MIMO MATLAB Simulation"
              class="single-project-image">
-        
-        <br>
 
         <div class="interest-list">
             <span class="tag">MATLAB</span>
@@ -852,47 +854,12 @@
 
 
         <!-- ANTENNA -->
-        
-    <div class="project-card">
+        <div class="project-card">
 
-    <div class="project-icon">📡</div>
-
-    <h3>Dipole Antenna and 7-Element Array</h3>
-
-    <p class="project-course">Antenna Analysis</p>
-
-    <p>
-        Designed and simulated a dipole antenna and a 7-element
-        linear dipole array at 1.5 GHz using MATLAB.
-        The project included analyzing input impedance,
-        reflection coefficient, radiation pattern, and gain.
-    </p>
-
-    <div class="antenna-images">
-
-        <img src="images/antenna-array.jpg"
-             alt="7-Element Dipole Antenna Array"
-             class="antenna-main-image">
-
-        <div class="antenna-results">
-
-            <img src="images/antenna-s11.jpg"
-                 alt="Antenna S11 Performance"
-                 class="antenna-result-image">
-
-            <img src="images/antenna-radiation-pattern.jpg"
-                 alt="Dipole Antenna Radiation Pattern"
-                 class="antenna-result-image">
-
-        </div>
-
-    </div>
-
-</div>
-                   
+            <div class="project-icon">📡</div>
 
             <h3>
-                Dipole Antenna & Array Design
+                Dipole Antenna and 7-Element Array
             </h3>
 
             <p class="project-course">
@@ -900,83 +867,104 @@
             </p>
 
             <p>
-                Designed and simulated a dipole antenna and linear
-                dipole array at 1.5 GHz, investigating transmission-line
-                impedance, gap length, excitation techniques,
-                and inter-element spacing.
+                Designed and simulated a dipole antenna and a 7-element
+                linear dipole array at 1.5 GHz using MATLAB.
+                The project included analyzing input impedance,
+                reflection coefficient, radiation pattern, and gain.
             </p>
+
+            <div class="antenna-images">
+
+                <img src="images/antenna-array.jpg"
+                     alt="7-Element Dipole Antenna Array"
+                     class="antenna-main-image">
+
+                <div class="antenna-results">
+
+                    <img src="images/antenna-s11.jpg"
+                         alt="Antenna S11 Performance"
+                         class="antenna-result-image">
+
+                    <img src="images/antenna-radiation-pattern.jpg"
+                         alt="Dipole Antenna Radiation Pattern"
+                         class="antenna-result-image">
+
+                </div>
+
+            </div>
 
             <div class="interest-list">
                 <span class="tag">Antenna Design</span>
                 <span class="tag">Gain</span>
                 <span class="tag">Radiation Pattern</span>
                 <span class="tag">Impedance</span>
+                <span class="tag">MATLAB</span>
             </div>
 
         </div>
 
 
         <!-- BUCK CONVERTER -->
-    <div class="project-card">
-
-    <div class="project-icon">⚡</div>
-
-    <h3>
-        Buck Converter Design
-    </h3>
-
-    <p class="project-course">
-        Power Electronics
-    </p>
-
-    <img src="images/buck-converter.jpg"
-         alt="Buck Converter Design"
-         class="single-project-image">
-
-    <p>
-        Designed and analyzed a Buck Converter to study
-        DC-DC voltage conversion, switching behavior,
-        and power electronics principles.
-    </p>
-
-    <div class="interest-list">
-        <span class="tag">Power Electronics</span>
-        <span class="tag">Circuit Analysis</span>
-        <span class="tag">Simulation</span>
-    </div>
-
-</div>
-
-
-        <!-- WIRELESS -->
         <div class="project-card">
 
-    <div class="project-icon">📶</div>
+            <div class="project-icon">⚡</div>
 
-    <h3>
-        Wireless Communication MATLAB Project
-    </h3>
+            <h3>
+                Buck Converter Design
+            </h3>
 
-    <p class="project-course">
-        Wireless Communications
-    </p>
+            <p class="project-course">
+                Power Electronics
+            </p>
 
-    <img src="images/wireless-matlab.jpg"
-         alt="Wireless Communication MATLAB Project"
-         class="single-project-image">
+            <img src="images/buck-converter.jpg"
+                 alt="Buck Converter Design"
+                 class="single-project-image">
 
-    <p>
-        MATLAB-based project involving wireless communication
-        system simulation and performance analysis.
-    </p>
+            <p>
+                Designed and analyzed a Buck Converter to study
+                DC-DC voltage conversion, switching behavior,
+                and power electronics principles.
+            </p>
 
-    <div class="interest-list">
-        <span class="tag">MATLAB</span>
-        <span class="tag">Wireless Communication</span>
-        <span class="tag">Simulation</span>
-    </div>
+            <div class="interest-list">
+                <span class="tag">Power Electronics</span>
+                <span class="tag">Circuit Analysis</span>
+                <span class="tag">Simulation</span>
+            </div>
 
-</div>    
+        </div>
+
+
+        <!-- WIRELESS COMMUNICATION -->
+        <div class="project-card">
+
+            <div class="project-icon">📶</div>
+
+            <h3>
+                Wireless Communication MATLAB Project
+            </h3>
+
+            <p class="project-course">
+                Wireless Communications
+            </p>
+
+            <img src="images/wireless-matlab.jpg"
+                 alt="Wireless Communication MATLAB Project"
+                 class="single-project-image">
+
+            <p>
+                MATLAB-based project involving wireless communication
+                system simulation and performance analysis.
+            </p>
+
+            <div class="interest-list">
+                <span class="tag">MATLAB</span>
+                <span class="tag">Wireless Communication</span>
+                <span class="tag">Simulation</span>
+            </div>
+
+        </div>
 
     </div>
 
@@ -1100,8 +1088,6 @@
         Download my CV to learn more about my education,
         technical skills, projects, and experience.
     </p>
-
-    <!-- We will connect the CV after uploading the PDF -->
 
     <a href="#contact" class="button primary">
         Contact Me
