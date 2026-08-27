@@ -28,13 +28,12 @@
             text-decoration: none;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             padding: 20px 7%;
-            background: rgba(11, 17, 32, 0.92);
+            background: rgba(11, 17, 32, 0.95);
             backdrop-filter: blur(12px);
             display: flex;
             justify-content: space-between;
@@ -51,7 +50,7 @@
 
         nav .links {
             display: flex;
-            gap: 25px;
+            gap: 22px;
         }
 
         nav a {
@@ -64,7 +63,6 @@
             color: #38bdf8;
         }
 
-        /* General */
         section {
             padding: 110px 10%;
         }
@@ -89,18 +87,13 @@
             margin-bottom: 45px;
         }
 
-        /* Hero */
         .hero {
             min-height: 100vh;
             padding: 160px 10% 100px;
             display: flex;
             align-items: center;
             background:
-                radial-gradient(
-                    circle at 80% 30%,
-                    rgba(56, 189, 248, 0.15),
-                    transparent 30%
-                ),
+                radial-gradient(circle at 80% 30%, rgba(56, 189, 248, 0.15), transparent 30%),
                 #0b1120;
         }
 
@@ -166,7 +159,6 @@
             transform: translateY(-3px);
         }
 
-        /* About */
         .about-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
@@ -205,22 +197,28 @@
             font-size: 13px;
         }
 
-        /* Featured Project */
         .featured {
             background: #0f172a;
         }
 
-        .featured-card {
+        .featured-card,
+        .research-card,
+        .project-card,
+        .skill-group,
+        .education-card {
             background: #111827;
             border: 1px solid #1e293b;
             border-radius: 18px;
-            padding: 40px;
-            transition: 0.3s;
         }
 
-        .featured-card:hover {
+        .featured-card {
+            padding: 40px;
+        }
+
+        .featured-card:hover,
+        .research-card:hover,
+        .project-card:hover {
             border-color: #38bdf8;
-            transform: translateY(-4px);
         }
 
         .project-number {
@@ -253,16 +251,22 @@
             margin-bottom: 12px;
         }
 
-        .project-columns ul {
+        .project-columns ul,
+        .contribution-list {
             padding-left: 20px;
             color: #94a3b8;
         }
 
-        /* Research */
-        .research-card {
-            background: #111827;
+        .project-image {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 30px;
             border: 1px solid #1e293b;
-            border-radius: 18px;
+        }
+
+        .research-card {
             padding: 40px;
         }
 
@@ -288,18 +292,12 @@
 
         .contribution {
             color: #cbd5e1;
-            margin-bottom: 25px;
-        }
-
-        .contribution-list {
-            padding-left: 20px;
-            color: #94a3b8;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         .publication-button {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 25px;
             padding: 12px 20px;
             border: 1px solid #38bdf8;
             color: #38bdf8;
@@ -312,7 +310,6 @@
             color: #0b1120;
         }
 
-        /* Academic Projects */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -320,16 +317,12 @@
         }
 
         .project-card {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 15px;
             padding: 30px;
             transition: 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            border-color: #38bdf8;
         }
 
         .project-icon {
@@ -353,7 +346,6 @@
             margin-bottom: 18px;
         }
 
-        /* Skills */
         .skills-section {
             background: #0f172a;
         }
@@ -365,10 +357,7 @@
         }
 
         .skill-group {
-            background: #111827;
-            border: 1px solid #1e293b;
             padding: 25px;
-            border-radius: 15px;
         }
 
         .skill-group h3 {
@@ -381,7 +370,6 @@
             color: #cbd5e1;
         }
 
-        /* Experience */
         .experience-card {
             border-left: 2px solid #38bdf8;
             padding-left: 30px;
@@ -402,12 +390,8 @@
             color: #94a3b8;
         }
 
-        /* Education */
         .education-card {
-            background: #111827;
-            border: 1px solid #1e293b;
             padding: 30px;
-            border-radius: 15px;
             max-width: 850px;
         }
 
@@ -419,16 +403,9 @@
             color: #94a3b8;
         }
 
-        /* CV */
         .cv-section {
             text-align: center;
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(56, 189, 248, 0.10),
-                    transparent 40%
-                ),
-                #0f172a;
+            background: #0f172a;
         }
 
         .cv-section .section-description {
@@ -436,7 +413,6 @@
             margin-right: auto;
         }
 
-        /* Contact */
         .contact {
             text-align: center;
         }
@@ -470,7 +446,6 @@
             font-size: 14px;
         }
 
-        /* Mobile */
         @media (max-width: 850px) {
 
             nav .links {
@@ -506,598 +481,530 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">MA.</div>
+<nav>
+    <div class="logo">MA.</div>
 
-        <div class="links">
-            <a href="#about">About</a>
-            <a href="#featured">Project</a>
-            <a href="#research">Research</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-
-    <!-- HOME -->
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <p class="hero-intro">Hello, I'm</p>
-
-            <h1>
-                Mariam <span>Alblooshi</span>
-            </h1>
-
-            <h2>
-                Electrical & Electronics Engineering Graduate
-            </h2>
-
-            <p class="hero-description">
-                Engineering graduate interested in Embedded Systems,
-                PCB Design, Wireless Communications, MATLAB, and
-                intelligent engineering solutions.
-            </p>
-
-            <div class="buttons">
-
-                <a href="#projects" class="button primary">
-                    View Projects
-                </a>
-
-                <a href="#research" class="button secondary">
-                    View Research
-                </a>
-
-                <a href="mailto:Maryam.h.o.189@gmail.com"
-                   class="button secondary">
-                    Contact Me
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
+    <div class="links">
+        <a href="#about">About</a>
+        <a href="#featured">Project</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
 
-    <!-- ABOUT -->
-    <section id="about">
+<!-- HOME -->
+<section class="hero">
 
-        <p class="section-label">About Me</p>
+    <div class="hero-content">
 
-        <h2 class="section-title">
-            Engineering with a practical mindset.
+        <p class="hero-intro">Hello, I'm</p>
+
+        <h1>
+            Mariam <span>Alblooshi</span>
+        </h1>
+
+        <h2>
+            Electrical & Electronics Engineering Graduate
         </h2>
 
-        <div class="about-grid">
-
-            <div>
-
-                <p class="about-text">
-                    I am an Electrical & Electronics Engineering graduate
-                    from the University of Sharjah with hands-on experience
-                    across embedded systems, electronics, PCB design,
-                    wireless communications, MATLAB, and engineering research.
-                </p>
-
-                <br>
-
-                <p class="about-text">
-                    Through academic projects and research, I have worked
-                    with microcontrollers, sensors, communication systems,
-                    antenna analysis, power electronics, and machine
-                    learning applications in wireless systems.
-                </p>
-
-            </div>
-
-            <div class="interest-box">
-
-                <h3>Areas of Interest</h3>
-
-                <div class="interest-list">
-                    <span class="tag">Embedded Systems</span>
-                    <span class="tag">PCB Design</span>
-                    <span class="tag">Wireless Communications</span>
-                    <span class="tag">Electronics</span>
-                    <span class="tag">MATLAB</span>
-                    <span class="tag">Machine Learning</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FEATURED PROJECT -->
-    <section id="featured" class="featured">
-
-        <p class="section-label">Featured Project</p>
-
-        <h2 class="section-title">
-            Senior Design Project
-        </h2>
-
-        <p class="section-description">
-            A multidisciplinary engineering project combining embedded
-            systems, sensors, wireless communication, PCB design,
-            and machine learning.
+        <p class="hero-description">
+            Engineering graduate with hands-on experience in embedded
+            systems, PCB design, wireless communications, MATLAB,
+            and intelligent engineering solutions.
         </p>
 
-        <div class="featured-card">
+        <div class="buttons">
 
-            <p class="project-number">
-                PROJECT 01
-            </p>
+            <a href="#projects" class="button primary">
+                View Projects
+            </a>
 
-            <h3>
-                Hybrid FES System with In-Shoe Gait Detection
-                for Mobility Rehabilitation
-            </h3>
+            <a href="#research" class="button secondary">
+                View Research
+            </a>
 
-            <p>
-                A wearable rehabilitation system designed to assist
-                mobility for patients experiencing foot drop. The system
-                combines in-shoe gait detection with a below-knee
-                Functional Electrical Stimulation (FES) module.
-            </p>
-
-            <div class="project-columns">
-
-                <div>
-
-                    <h4>Hardware</h4>
-
-                    <ul>
-                        <li>ESP32</li>
-                        <li>FSR Sensors</li>
-                        <li>MPU6050 IMU</li>
-                        <li>MyoWare EMG Sensor</li>
-                        <li>DS18B20 Temperature Sensor</li>
-                        <li>Custom PCB</li>
-                    </ul>
-
-                </div>
-
-                <div>
-
-                    <h4>Software & Communication</h4>
-
-                    <ul>
-                        <li>MATLAB</li>
-                        <li>Python</li>
-                        <li>Machine Learning</li>
-                        <li>Embedded Programming</li>
-                        <li>Bluetooth Low Energy (BLE)</li>
-                    </ul>
-
-                </div>
-
-            </div>
+            <a href="mailto:Maryam.h.o.189@gmail.com"
+               class="button secondary">
+                Contact Me
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- RESEARCH -->
-    <section id="research">
+<!-- ABOUT -->
+<section id="about">
 
-        <p class="section-label">Research & Publication</p>
+    <p class="section-label">About Me</p>
 
-        <h2 class="section-title">
-            Conference Research
-        </h2>
+    <h2 class="section-title">
+        Engineering with a practical mindset.
+    </h2>
 
-        <p class="section-description">
-            Research work focused on intelligent wireless communication
-            systems for 5G and beyond.
-        </p>
+    <div class="about-grid">
 
-        <div class="research-card">
+        <div>
 
-            <span class="research-status">
-                IEEE ICRAIE 2025
-            </span>
-
-            <h3>
-                Machine Learning for 5G Massive MIMO Systems and Beyond:
-                Integrating Artificial General Intelligence (AGI)
-            </h3>
-
-            <p class="research-meta">
-                Conference Paper • Paper #1571178952
+            <p class="about-text">
+                I am an Electrical & Electronics Engineering graduate
+                from the University of Sharjah with hands-on experience
+                across embedded systems, electronics, PCB design,
+                wireless communications, MATLAB, and engineering research.
             </p>
 
-            <p class="contribution">
-                <strong>My Contribution:</strong>
+            <br>
+
+            <p class="about-text">
+                Through academic projects and research, I have worked
+                with microcontrollers, sensors, communication systems,
+                antenna analysis, power electronics, and machine
+                learning applications in wireless systems.
             </p>
 
-            <ul class="contribution-list">
+        </div>
 
-                <li>Overview of Massive MIMO systems.</li>
+        <div class="interest-box">
 
-                <li>Comparison between Artificial Intelligence and AGI.</li>
-
-                <li>Applications of AGI in 5G and beyond.</li>
-
-                <li>Role of Machine Learning in Massive MIMO systems.</li>
-
-                <li>Applications of Machine Learning in Massive MIMO.</li>
-
-                <li>
-                    Analysis of challenges associated with integrating
-                    ML and AGI into Massive MIMO systems.
-                </li>
-
-                <li>
-                    Analysis of opportunities and future potential
-                    of ML and AGI in next-generation wireless systems.
-                </li>
-
-                <li>
-                    MATLAB-based work related to Massive MIMO.
-                </li>
-
-            </ul>
+            <h3>Areas of Interest</h3>
 
             <div class="interest-list">
-
-                <span class="tag">MATLAB</span>
-                <span class="tag">Massive MIMO</span>
-                <span class="tag">5G</span>
+                <span class="tag">Embedded Systems</span>
+                <span class="tag">PCB Design</span>
                 <span class="tag">Wireless Communications</span>
+                <span class="tag">Electronics</span>
+                <span class="tag">MATLAB</span>
                 <span class="tag">Machine Learning</span>
-                <span class="tag">AGI</span>
-
             </div>
-
-            <a
-                href="https://ieeexplore.ieee.org/document/11239297"
-                target="_blank"
-                class="publication-button">
-                View IEEE Publication →
-            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ACADEMIC PROJECTS -->
-    <section id="projects" class="featured">
+<!-- FEATURED PROJECT -->
+<section id="featured" class="featured">
 
-        <p class="section-label">Academic Projects</p>
+    <p class="section-label">Featured Project</p>
 
-        <h2 class="section-title">
-            Engineering Projects
-        </h2>
+    <h2 class="section-title">
+        Senior Design Project
+    </h2>
 
-        <p class="section-description">
-            Selected projects completed during my Electrical &
-            Electronics Engineering studies.
+    <div class="featured-card">
+
+        <p class="project-number">PROJECT 01</p>
+
+        <!-- Add FES image here later -->
+        <!-- <img src="images/fes-project.jpg"
+             alt="Hybrid FES System"
+             class="project-image"> -->
+
+        <h3>
+            Hybrid FES System with In-Shoe Gait Detection
+            for Mobility Rehabilitation
+        </h3>
+
+        <p>
+            A wearable rehabilitation system designed to assist
+            mobility for patients experiencing foot drop. The system
+            combines in-shoe gait detection with a below-knee
+            Functional Electrical Stimulation (FES) module.
         </p>
 
-        <div class="project-grid">
+        <div class="project-columns">
 
+            <div>
+                <h4>Hardware</h4>
 
-            <!-- Antenna -->
-            <div class="project-card">
-
-                <div class="project-icon">📡</div>
-
-                <h3>
-                    Dipole Antenna & Array Design
-                </h3>
-
-                <p class="project-course">
-                    Antenna Analysis • 1.5 GHz
-                </p>
-
-                <p>
-                    Designed and simulated a dipole antenna and linear
-                    dipole array at 1.5 GHz, investigating the effects
-                    of transmission-line impedance, gap length,
-                    excitation techniques, and inter-element spacing.
-                </p>
-
-                <div class="interest-list">
-                    <span class="tag">Antenna Design</span>
-                    <span class="tag">Gain</span>
-                    <span class="tag">Radiation Pattern</span>
-                    <span class="tag">Impedance</span>
-                </div>
-
+                <ul>
+                    <li>ESP32</li>
+                    <li>FSR Sensors</li>
+                    <li>MPU6050 IMU</li>
+                    <li>MyoWare EMG Sensor</li>
+                    <li>DS18B20 Temperature Sensor</li>
+                    <li>Custom PCB</li>
+                </ul>
             </div>
 
+            <div>
+                <h4>Software & Communication</h4>
 
-            <!-- Buck Converter -->
-            <div class="project-card">
-
-                <div class="project-icon">⚡</div>
-
-                <h3>
-                    Buck Converter Design
-                </h3>
-
-                <p class="project-course">
-                    Power Electronics
-                </p>
-
-                <p>
-                    Designed and analyzed a Buck Converter to study
-                    DC-DC voltage conversion, switching behavior,
-                    and power electronics principles.
-                </p>
-
-                <div class="interest-list">
-                    <span class="tag">Power Electronics</span>
-                    <span class="tag">Circuit Analysis</span>
-                    <span class="tag">Simulation</span>
-                </div>
-
+                <ul>
+                    <li>MATLAB</li>
+                    <li>Python</li>
+                    <li>Machine Learning</li>
+                    <li>Embedded Programming</li>
+                    <li>Bluetooth Low Energy (BLE)</li>
+                </ul>
             </div>
 
+        </div>
 
-            <!-- Wireless Communication -->
-            <div class="project-card">
+    </div>
 
-                <div class="project-icon">📶</div>
-
-                <h3>
-                    Wireless Communication MATLAB Project
-                </h3>
-
-                <p class="project-course">
-                    Wireless Communications
-                </p>
-
-                <p>
-                    MATLAB-based project involving wireless communication
-                    system simulation and performance analysis.
-                </p>
-
-                <div class="interest-list">
-                    <span class="tag">MATLAB</span>
-                    <span class="tag">Wireless Communication</span>
-                    <span class="tag">Simulation</span>
-                </div>
-
-            </div>
+</section>
 
 
-    </section>
+<!-- RESEARCH -->
+<section id="research">
 
+    <p class="section-label">Research & Publication</p>
 
-    <!-- SKILLS -->
-    <section id="skills" class="skills-section">
+    <h2 class="section-title">
+        Conference Research
+    </h2>
 
-        <p class="section-label">Technical Skills</p>
+    <div class="research-card">
 
-        <h2 class="section-title">
-            Tools & Technologies
-        </h2>
+        <span class="research-status">
+            IEEE ICRAIE 2025
+        </span>
 
-        <p class="section-description">
-            Technical areas developed through academic projects,
-            research, laboratory work, and engineering practice.
+        <h3>
+            Machine Learning for 5G Massive MIMO Systems and Beyond:
+            Integrating Artificial General Intelligence (AGI)
+        </h3>
+
+        <p class="research-meta">
+            Conference Paper • Paper #1571178952
         </p>
 
-        <div class="skills-grid">
-
-            <div class="skill-group">
-
-                <h3>Programming & Simulation</h3>
-
-                <p>
-                    MATLAB<br>
-                    Python<br>
-                    Simulink
-                </p>
-
-            </div>
-
-            <div class="skill-group">
-
-                <h3>Embedded Systems</h3>
-
-                <p>
-                    ESP32<br>
-                    Microcontrollers<br>
-                    Sensors<br>
-                    BLE
-                </p>
-
-            </div>
-
-            <div class="skill-group">
-
-                <h3>Electronics</h3>
-
-                <p>
-                    PCB Design<br>
-                    Circuit Analysis<br>
-                    Electronics Prototyping
-                </p>
-
-            </div>
-
-            <div class="skill-group">
-
-                <h3>Wireless Communications</h3>
-
-                <p>
-                    Massive MIMO<br>
-                    5G<br>
-                    Wireless Communications<br>
-                    Antenna Analysis
-                </p>
-
-            </div>
-
-            <div class="skill-group">
-
-                <h3>Machine Learning</h3>
-
-                <p>
-                    Machine Learning<br>
-                    Intelligent Wireless Systems<br>
-                    TensorFlow Lite
-                </p>
-
-            </div>
-
-            <div class="skill-group">
-
-                <h3>Engineering</h3>
-
-                <p>
-                    Circuit Simulation<br>
-                    Signal Analysis<br>
-                    Technical Research<br>
-                    Engineering Documentation
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-
-        <p class="section-label">Experience</p>
-
-        <h2 class="section-title">
-            Engineering Internship
-        </h2>
-
-        <div class="experience-card">
-
-            <h3>
-                Sharjah Electricity, Water and Gas Authority (SEWA)
-            </h3>
-
-            <p class="experience-role">
-                Engineering Intern
-            </p>
-
-            <p>
-                Gained practical exposure to engineering operations,
-                electrical drawings, technical procedures, and
-                professional engineering environments.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-    <section>
-
-        <p class="section-label">Education</p>
-
-        <h2 class="section-title">
-            Academic Background
-        </h2>
-
-        <div class="education-card">
-
-            <h3>
-                University of Sharjah
-            </h3>
-
-            <p>
-                Bachelor of Science in Electrical & Electronics Engineering
-            </p>
-
-            <p>
-                2026
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- CV -->
-    <section class="cv-section">
-
-        <p class="section-label">Resume</p>
-
-        <h2 class="section-title">
-            Interested in my background?
-        </h2>
-
-        <p class="section-description">
-            Download my CV to learn more about my education,
-            technical skills, projects, and experience.
+        <p class="contribution">
+            <strong>My Contribution:</strong>
         </p>
 
-        <!-- CV link will be added after uploading the PDF -->
+        <ul class="contribution-list">
 
-        <a href="#contact" class="button primary">
-            Contact Me
+            <li>Overview of Massive MIMO systems.</li>
+            <li>Comparison between AI and AGI.</li>
+            <li>Applications of AGI in 5G and beyond.</li>
+            <li>Role of Machine Learning in Massive MIMO systems.</li>
+            <li>Applications of Machine Learning in Massive MIMO.</li>
+            <li>Challenges of integrating ML and AGI into Massive MIMO.</li>
+            <li>Opportunities and future potential of ML and AGI.</li>
+            <li>MATLAB-based work related to Massive MIMO.</li>
+
+        </ul>
+
+        <br>
+
+        <div class="interest-list">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Massive MIMO</span>
+            <span class="tag">5G</span>
+            <span class="tag">Wireless Communications</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">AGI</span>
+        </div>
+
+        <a
+            href="https://ieeexplore.ieee.org/document/11239297"
+            target="_blank"
+            class="publication-button">
+            View IEEE Publication →
         </a>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
+<!-- ACADEMIC PROJECTS -->
+<section id="projects" class="featured">
 
-        <p class="section-label">Contact</p>
+    <p class="section-label">Academic Projects</p>
 
-        <h2 class="section-title">
-            Let's Connect
-        </h2>
+    <h2 class="section-title">
+        Engineering Projects
+    </h2>
 
-        <p class="section-description" style="margin-left:auto;margin-right:auto;">
-            I'm open to engineering opportunities, graduate roles,
-            and professional connections.
-        </p>
+    <div class="project-grid">
 
-        <div class="contact-links">
 
-            <a
-                href="mailto:Maryam.h.o.189@gmail.com"
-                class="contact-link">
-                ✉ Email
-            </a>
+        <!-- ANTENNA -->
+        <div class="project-card">
 
-            <a
-                href="https://www.linkedin.com/in/mariam-alblooshi-4a8327416/"
-                target="_blank"
-                class="contact-link">
-                LinkedIn
-            </a>
+            <div class="project-icon">📡</div>
 
-            <a
-                href="https://github.com/Mariam-251"
-                target="_blank"
-                class="contact-link">
-                GitHub
-            </a>
+            <!-- Add antenna image later -->
+            <!-- <img src="images/antenna.jpg"
+                 alt="Dipole Antenna"
+                 class="project-image"> -->
+
+            <h3>
+                Dipole Antenna & Array Design
+            </h3>
+
+            <p class="project-course">
+                Antenna Analysis • 1.5 GHz
+            </p>
+
+            <p>
+                Designed and simulated a dipole antenna and linear
+                dipole array at 1.5 GHz, investigating transmission-line
+                impedance, gap length, excitation techniques,
+                and inter-element spacing.
+            </p>
+
+            <div class="interest-list">
+                <span class="tag">Antenna Design</span>
+                <span class="tag">Gain</span>
+                <span class="tag">Radiation Pattern</span>
+                <span class="tag">Impedance</span>
+            </div>
 
         </div>
 
-    </section>
+
+        <!-- BUCK CONVERTER -->
+        <div class="project-card">
+
+            <div class="project-icon">⚡</div>
+
+            <!-- Add buck converter image later -->
+            <!-- <img src="images/buck-converter.jpg"
+                 alt="Buck Converter"
+                 class="project-image"> -->
+
+            <h3>
+                Buck Converter Design
+            </h3>
+
+            <p class="project-course">
+                Power Electronics
+            </p>
+
+            <p>
+                Designed and analyzed a Buck Converter to study
+                DC-DC voltage conversion, switching behavior,
+                and power electronics principles.
+            </p>
+
+            <div class="interest-list">
+                <span class="tag">Power Electronics</span>
+                <span class="tag">Circuit Analysis</span>
+                <span class="tag">Simulation</span>
+            </div>
+
+        </div>
 
 
-    <!-- FOOTER -->
-    <footer>
-        © 2026 Mariam Alblooshi. All rights reserved.
-    </footer>
+        <!-- WIRELESS -->
+        <div class="project-card">
+
+            <div class="project-icon">📶</div>
+
+            <!-- Add MATLAB image later -->
+            <!-- <img src="images/wireless-matlab.jpg"
+                 alt="Wireless Communication MATLAB Project"
+                 class="project-image"> -->
+
+            <h3>
+                Wireless Communication MATLAB Project
+            </h3>
+
+            <p class="project-course">
+                Wireless Communications
+            </p>
+
+            <p>
+                MATLAB-based project involving wireless communication
+                system simulation and performance analysis.
+            </p>
+
+            <div class="interest-list">
+                <span class="tag">MATLAB</span>
+                <span class="tag">Wireless Communication</span>
+                <span class="tag">Simulation</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+
+    <p class="section-label">Technical Skills</p>
+
+    <h2 class="section-title">
+        Tools & Technologies
+    </h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-group">
+            <h3>Programming & Simulation</h3>
+            <p>MATLAB<br>Python<br>Simulink</p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Embedded Systems</h3>
+            <p>ESP32<br>Microcontrollers<br>Sensors<br>BLE</p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Electronics</h3>
+            <p>PCB Design<br>Circuit Analysis<br>Electronics Prototyping</p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Wireless Communications</h3>
+            <p>Massive MIMO<br>5G<br>Wireless Communications<br>Antenna Analysis</p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Machine Learning</h3>
+            <p>Machine Learning<br>Intelligent Wireless Systems<br>TensorFlow Lite</p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Engineering</h3>
+            <p>Circuit Simulation<br>Signal Analysis<br>Technical Research<br>Engineering Documentation</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+    <p class="section-label">Experience</p>
+
+    <h2 class="section-title">
+        Engineering Internship
+    </h2>
+
+    <div class="experience-card">
+
+        <h3>
+            Sharjah Electricity, Water and Gas Authority (SEWA)
+        </h3>
+
+        <p class="experience-role">
+            Engineering Intern
+        </p>
+
+        <p>
+            Gained practical exposure to engineering operations,
+            electrical drawings, technical procedures, and
+            professional engineering environments.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section>
+
+    <p class="section-label">Education</p>
+
+    <h2 class="section-title">
+        Academic Background
+    </h2>
+
+    <div class="education-card">
+
+        <h3>
+            University of Sharjah
+        </h3>
+
+        <p>
+            Bachelor of Science in Electrical & Electronics Engineering
+        </p>
+
+        <p>
+            2026
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CV -->
+<section class="cv-section">
+
+    <p class="section-label">Resume</p>
+
+    <h2 class="section-title">
+        Interested in my background?
+    </h2>
+
+    <p class="section-description">
+        Download my CV to learn more about my education,
+        technical skills, projects, and experience.
+    </p>
+
+    <!-- We will connect the CV after uploading the PDF -->
+
+    <a href="#contact" class="button primary">
+        Contact Me
+    </a>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <p class="section-label">Contact</p>
+
+    <h2 class="section-title">
+        Let's Connect
+    </h2>
+
+    <p class="section-description" style="margin-left:auto;margin-right:auto;">
+        I'm open to engineering opportunities, graduate roles,
+        and professional connections.
+    </p>
+
+    <div class="contact-links">
+
+        <a
+            href="mailto:Maryam.h.o.189@gmail.com"
+            class="contact-link">
+            ✉ Email
+        </a>
+
+        <a
+            href="https://www.linkedin.com/in/mariam-alblooshi-4a8327416/"
+            target="_blank"
+            class="contact-link">
+            LinkedIn
+        </a>
+
+        <a
+            href="https://github.com/Mariam-251"
+            target="_blank"
+            class="contact-link">
+            GitHub
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 Mariam Alblooshi. All rights reserved.
+</footer>
 
 </body>
 </html>
